@@ -1,2 +1,3 @@
-include ':app'
+include ':app', ':common-libs'
 rootProject.name='MongooZe'
+project(':common-libs').projectDir = new File('android-common-libs/common-libs')

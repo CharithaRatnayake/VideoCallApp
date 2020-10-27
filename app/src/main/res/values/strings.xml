@@ -1,3 +1,15 @@
 <resources>
+    <!--Fonts-->
+    <string name="sf_light" translatable="false">fonts/SF-Pro-Display-Light.otf</string>
+    <string name="sf_medium" translatable="false">fonts/SF-Pro-Display-Medium.otf</string>
+    <string name="sf_regular" translatable="false">fonts/SF-Pro-Display-Regular.otf</string>
+    <string name="sf_semi_bold" translatable="false">fonts/SF-Pro-Display-Semibold.otf</string>
+
     <string name="app_name">MongooZe</string>
+    <string name="start_a_new_meeting">Start a new meeting</string>
+    <string name="meeting_name">Meeting name</string>
+    <string name="join">Join</string>
+    <string name="title_1">The best solution for distance learning : A video conferencing platform for online learning</string>
+    <string name="title_2">Connect with the teachers and students virtually and share knowledge and expertise from any part of the country. This platform makes online teaching smarter and easier for everyone.</string>
+    <string name="permission_camera_and_audio">Camera and audio access are needed.</string>
 </resources>
