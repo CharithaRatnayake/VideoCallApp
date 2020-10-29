@@ -16,45 +16,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/ivSettings"
+    <ImageButton
+        android:id="@+id/ibSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:src="@drawable/ic_settings"
+        android:background="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.jachdev.commonlibs.widget.CustomTextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginEnd="36dp"
-        android:text="@string/title_1"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        app:fontType="@string/sf_medium"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo">
 
-    <com.jachdev.commonlibs.widget.CustomTextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginEnd="36dp"
-        android:text="@string/title_2"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        app:fontType="@string/sf_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.jachdev.commonlibs.widget.CustomTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/title_1"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                app:fontType="@string/sf_medium" />
+
+            <com.jachdev.commonlibs.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                android:text="@string/title_2"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                app:fontType="@string/sf_regular" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -87,9 +99,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/meeting_name"
+                android:maxLines="1"
                 android:textColor="@color/colorPrimary"
                 android:backgroundTint="@color/colorPrimary"
-                app:fontType="@string/sf_light"/>
+                app:fontType="@string/sf_light"
+                app:emojiEnabled="false"/>
 
         </LinearLayout>
 

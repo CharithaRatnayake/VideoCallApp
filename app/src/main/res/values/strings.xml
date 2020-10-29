@@ -9,7 +9,14 @@
     <string name="start_a_new_meeting">Start a new meeting</string>
     <string name="meeting_name">Meeting name</string>
     <string name="join">Join</string>
-    <string name="title_1">The best solution for distance learning : A video conferencing platform for online learning</string>
-    <string name="title_2">Connect with the teachers and students virtually and share knowledge and expertise from any part of the country. This platform makes online teaching smarter and easier for everyone.</string>
+    <string name="title_1">MongooZe :The best solution for Virtual Meetings</string>
+    <string name="title_2">Connect with your friends no matter where they are.This a reliable platform for video , voice and chat which runs across mobile devices and Desktops.</string>
     <string name="permission_camera_and_audio">Camera and audio access are needed.</string>
+    <string name="profile">Profile</string>
+    <string name="set_your_display_name">Set your display name</string>
+    <string name="name">Name</string>
+    <string name="set_your_email">Set your email</string>
+    <string name="email">Email</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>
