@@ -5,7 +5,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
@@ -16,7 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.landing.MainActivity"
+        <activity
+            android:name=".ui.landing.intro.IntroActivity"
+            android:label="@string/title_activity_intro"></activity>
+        <activity
+            android:name=".ui.landing.SplashActivity"
+            android:theme="@style/SplashTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.MeetingActivity"/>
+        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.meeting.MeetingActivity" />
     </application>
 
 </manifest>

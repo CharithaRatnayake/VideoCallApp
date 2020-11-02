@@ -4,19 +4,44 @@
     <string name="sf_medium" translatable="false">fonts/SF-Pro-Display-Medium.otf</string>
     <string name="sf_regular" translatable="false">fonts/SF-Pro-Display-Regular.otf</string>
     <string name="sf_semi_bold" translatable="false">fonts/SF-Pro-Display-Semibold.otf</string>
+    <string name="nunito_extra_bold" translatable="false">fonts/Nunito-ExtraBold.ttf</string>
 
-    <string name="app_name">MongooZe</string>
-    <string name="start_a_new_meeting">Start a new meeting</string>
-    <string name="meeting_name">Meeting name</string>
-    <string name="join">Join</string>
-    <string name="title_1">MongooZe :The best solution for Virtual Meetings</string>
-    <string name="title_2">Connect with your friends no matter where they are.This a reliable platform for video , voice and chat which runs across mobile devices and Desktops.</string>
-    <string name="permission_camera_and_audio">Camera and audio access are needed.</string>
-    <string name="profile">Profile</string>
-    <string name="set_your_display_name">Set your display name</string>
-    <string name="name">Name</string>
-    <string name="set_your_email">Set your email</string>
-    <string name="email">Email</string>
-    <string name="save">Save</string>
-    <string name="cancel">Cancel</string>
+    <string name="app_name" translatable="false">MongooZe</string>
+    <string name="start_a_new_meeting" translatable="false">Start a new meeting</string>
+    <string name="meeting_name" translatable="false">Meeting name</string>
+    <string name="join" translatable="false">Join</string>
+    <string name="title_1" translatable="false">MongooZe :The best solution for Virtual Meetings</string>
+    <string name="title_2" translatable="false">Connect with your friends no matter where they are.This a reliable platform for video , voice and chat which runs across mobile devices and Desktops.</string>
+    <string name="permission_camera_and_audio" translatable="false">Camera and audio access are needed.</string>
+    <string name="profile" translatable="false">Profile</string>
+    <string name="set_your_display_name" translatable="false">Set your display name</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="set_your_email" translatable="false">Set your email</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="powered_by" translatable="false">Powered by</string>
+    <string name="title_activity_intro" translatable="false">IntroActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="skip" translatable="false">Skip</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
+    <string-array name="intro_title">
+        <item>@string/reliable</item>
+        <item>@string/collaborative</item>
+        <item>@string/secure</item>
+    </string-array>
+    <string-array name="intro_content">
+        <item>@string/intro_text_0</item>
+        <item>@string/intro_text_1</item>
+        <item>@string/intro_text_2</item>
+    </string-array>
+    <string name="reliable" translatable="false">Reliable</string>
+    <string name="collaborative" translatable="false">Collaborative</string>
+    <string name="secure" translatable="false">Secure</string>
+    <string name="intro_text_0" translatable="false">Reliable Video Telephony and Chat services</string>
+    <string name="intro_text_1" translatable="false">Collaborate with Your team no matter where you are</string>
+    <string name="intro_text_2" translatable="false">Free and Secure video calls to anyone</string>
 </resources>
