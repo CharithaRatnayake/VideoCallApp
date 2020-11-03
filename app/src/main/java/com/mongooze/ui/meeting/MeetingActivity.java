@@ -2,11 +2,16 @@ package com.mongooze.ui.meeting;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
+import android.widget.Toast;
 
 import com.facebook.react.modules.core.PermissionListener;
+import com.jachdev.commonlibs.dialog.ProgressDialog;
+import com.jachdev.commonlibs.utils.Helper;
 import com.mongooze.R;
 import com.mongooze.base.SessionManager;
 
@@ -30,9 +35,13 @@ public class MeetingActivity extends AppCompatActivity implements JitsiMeetActiv
     private JitsiMeetView view;
     private SessionManager sessionManager;
 
+    private ProgressDialog mProgressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        showWaiting();
 
         view = new JitsiMeetView(this);
         sessionManager = new SessionManager(MeetingActivity.this);
@@ -84,7 +93,21 @@ public class MeetingActivity extends AppCompatActivity implements JitsiMeetActiv
 
     @Override
     public void onBackPressed() {
-        JitsiMeetActivityDelegate.onBackPressed();
+        AlertDialog.Builder builder = Helper.getCustomAlertDialogView(this, true,
+                R.drawable.cl_ic_alert,
+                "Alert",
+                getString(R.string.alert_leave_conversation));
+
+        builder.setPositiveButton(R.string.button_yes, (dialog, id) -> {
+            JitsiMeetActivityDelegate.onBackPressed();
+        });
+
+        builder.setNegativeButton(R.string.button_no, (dialog, which) -> {
+
+        });
+
+        builder.create().show();
+
     }
 
     @Override
@@ -112,11 +135,21 @@ public class MeetingActivity extends AppCompatActivity implements JitsiMeetActiv
     @Override
     public void onConferenceJoined(Map<String, Object> map) {
         Log.d(TAG, "onConferenceJoined: ");
+
+        dismissWaiting();
     }
 
     @Override
     public void onConferenceTerminated(Map<String, Object> map) {
         Log.d(TAG, "onConferenceTerminated: ");
+        dismissWaiting();
+
+        if(!map.isEmpty() && map.get("error") != null){
+            Toast.makeText(
+                    MeetingActivity.this, getString(R.string.error_connection_timeout),
+                    Toast.LENGTH_LONG
+            ).show();
+        }
 
         MeetingActivity.this.finish();
     }
@@ -124,5 +157,23 @@ public class MeetingActivity extends AppCompatActivity implements JitsiMeetActiv
     @Override
     public void onConferenceWillJoin(Map<String, Object> map) {
         Log.d(TAG, "onConferenceWillJoin: ");
+    }
+
+    public void showWaiting() {
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(this, com.jachdev.commonlibs.R.style.cl_progress_bar);
+            mProgressDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        }
+
+        if (!mProgressDialog.isShowing()) {
+            mProgressDialog.show();
+        }
+    }
+
+    public void dismissWaiting() {
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.dismiss();
+            mProgressDialog = null;
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.mongooze.ui.landing.intro.ui;
+package com.mongooze.ui.landing.intro;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -59,8 +59,13 @@ public class IntroFragment extends Fragment {
 
         String[] titles = getResources().getStringArray(R.array.intro_title);
         String[] contents = getResources().getStringArray(R.array.intro_content);
+        int[] resources = new int[]{
+                R.drawable.ic_reliable, R.drawable.ic_collaborative, R.drawable.ic_secure
+        };
+
 
         tvTitle.setAnyText(titles[mFragmentType]);
         tvContent.setAnyText(contents[mFragmentType]);
+        imageView.setImageResource(resources[mFragmentType]);
     }
 }

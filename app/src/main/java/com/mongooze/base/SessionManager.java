@@ -30,4 +30,12 @@ public class SessionManager {
     public void setEmail(String putString){
         mTinyDb.putString(AppConstant.Pref.KEY_EMAIL, putString);
     }
+
+    public void setIsNewUser() {
+        mTinyDb.putBoolean(AppConstant.Pref.KEY_IS_NEW, true);
+    }
+
+    public boolean isNewUser() {
+        return !mTinyDb.getBoolean(AppConstant.Pref.KEY_IS_NEW);
+    }
 }
