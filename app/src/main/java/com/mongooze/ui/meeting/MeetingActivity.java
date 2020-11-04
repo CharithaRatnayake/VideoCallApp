@@ -93,6 +93,7 @@ public class MeetingActivity extends AppCompatActivity implements JitsiMeetActiv
 
     @Override
     public void onBackPressed() {
+
         AlertDialog.Builder builder = Helper.getCustomAlertDialogView(this, true,
                 R.drawable.cl_ic_alert,
                 "Alert",
@@ -157,11 +158,19 @@ public class MeetingActivity extends AppCompatActivity implements JitsiMeetActiv
     @Override
     public void onConferenceWillJoin(Map<String, Object> map) {
         Log.d(TAG, "onConferenceWillJoin: ");
+
+        dismissWaiting();
     }
 
     public void showWaiting() {
         if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(this, com.jachdev.commonlibs.R.style.cl_progress_bar);
+            mProgressDialog = new ProgressDialog(this, com.jachdev.commonlibs.R.style.cl_progress_bar){
+                @Override
+                public void onBackPressed() {
+                }
+            };
+            mProgressDialog.setCancelable(false);
+            mProgressDialog.setCanceledOnTouchOutside(false);
             mProgressDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         }
 
