@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "951570059357",
+    "firebase_url": "https://mongooze-ios.firebaseio.com",
+    "project_id": "mongooze-ios",
+    "storage_bucket": "mongooze-ios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951570059357:android:b4ea99487a10ca6d5bfdb4",
+        "android_client_info": {
+          "package_name": "com.mongooze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951570059357-g920lanuhjog24630l9a5avsh12n6p67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2NRoqk_PcfmMvppqt6JtkJ2dGFL1tfvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951570059357-g920lanuhjog24630l9a5avsh12n6p67.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "951570059357-a3rqjko3q4e72nid5p9h336dtvp7p57v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.techleadintl.mongooze"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
