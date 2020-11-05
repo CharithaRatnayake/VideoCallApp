@@ -16,9 +16,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ui.landing.intro.IntroActivity"
-            android:label="@string/title_activity_intro"></activity>
-        <activity
             android:name=".ui.landing.SplashActivity"
             android:theme="@style/SplashTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
@@ -28,8 +25,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.MainActivity" />
-        <activity android:name=".ui.meeting.MeetingActivity" />
+        <activity
+            android:name=".ui.landing.intro.IntroActivity"
+            android:label="@string/title_activity_intro"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.meeting.MeetingActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
