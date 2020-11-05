@@ -62,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
             Dexter.withActivity(this)
                     .withPermissions(
                             Manifest.permission.CAMERA,
-                            Manifest.permission.RECORD_AUDIO,
-                            Manifest.permission.GET_ACCOUNTS
+                            Manifest.permission.RECORD_AUDIO
                     ).withListener(new MultiplePermissionsListener() {
                 @Override public void onPermissionsChecked(MultiplePermissionsReport report) {
 
